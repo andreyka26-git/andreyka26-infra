@@ -1,0 +1,11 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: "your-api"
+    scheme: http
+    static_configs:
+      - targets: ["your-api:4187"]
+    basic_auth:
+      username: "promAdmin" # replace with PROMETHEUS_USERNAME
+      password: "pass" # replace with PROMETHEUS_PASSWORD
